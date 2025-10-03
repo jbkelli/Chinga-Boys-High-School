@@ -6,7 +6,7 @@ const Events = () => {
   return (
     <>
     <Header />
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
+    <div className="pt-20 min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">

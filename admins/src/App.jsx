@@ -1,27 +1,27 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { createRoot } from 'react-dom/client'
-import Teachers from "./components/Teachers";
-import Health from "./components/Health";
-import Admissions from "./components/Admissions";
-import Faculty from "./components/Faculty";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Admissions from './components/Admissions';
+import Faculty from './components/Faculty';
+import Health from './components/Health';
+import Teachers from './components/Teachers';
 
-const root = createRoot(document.getElementById('root'))
-
-function App(){
-  return(
-    <>
-      <Teachers />
-      <Health />
-      <Health />
-      <Admissions />
-      <Faculty />
-    </>
-  )
+function App() {
+  return (
+    <div className="App min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow pt-20">
+        <Routes>
+          <Route path="/" element={<Admissions />} />
+          <Route path="/faculty" element={<Faculty />} />
+          <Route path="/health" element={<Health />} />
+          <Route path="/teachers" element={<Teachers />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-root.render(
-  <App />
-)
-
-export default App
+export default App;
