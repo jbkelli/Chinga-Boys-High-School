@@ -102,8 +102,8 @@ const Student = () => {
   const StudentDashboard = () => (
     <>
     <Header />
-    <div className="pt-20 min-h-screen bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200">
-      <div className="flex">
+    <div className="pt-24 min-h-screen bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200">
+      <div className="flex mt-2">
         {/* Sidebar */}
         <div className="w-64 bg-slate-800 min-h-screen shadow-2xl">
           {/* Main Navigation */}

@@ -6,9 +6,9 @@ const Parents = () => {
   return (
     <>
     <Header />
-    <div className="pt-20 min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
+    <div className="pt-24 min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
+      <div className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20 mt-2">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Parents Information Board

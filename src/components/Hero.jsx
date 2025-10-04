@@ -5,22 +5,22 @@ const Hero = () => {
   return (
     <div id="home">
       {/* Main Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-300 via-cyan-400 to-teal-400 pb-32">
+      <section className="pt-28 relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-cyan-300 via-cyan-400 to-teal-400 pb-16">
         {/* Background overlay */}
         <div className="absolute inset-0 bg-aqua bg-opacity-10"></div>
         
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className=" relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Content */}
             <div className="text-center lg:text-left">
               {/* Main Title Card */}
-              <div className="bg-blue-900 bg-opacity-90 rounded-2xl p-8 mb-8 shadow-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+              <div className="bg-blue-900 bg-opacity-90 rounded-2xl p-6 mb-6 shadow-2xl">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
                   CHINGA BOYS HIGH SCHOOL
                 </h1>
-                <div className="border-t-2 border-white pt-4">
-                  <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">Motto</h2>
-                  <p className="text-xl md:text-2xl text-cyan-200 font-medium">
+                <div className="border-t-2 border-white pt-3">
+                  <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">Motto</h2>
+                  <p className="text-lg md:text-xl text-cyan-200 font-medium">
                     Determine Your<br />
                     Destiny
                   </p>
@@ -28,7 +28,7 @@ const Hero = () => {
               </div>
 
               {/* Description */}
-              <p className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base md:text-lg text-white mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 At Chinga Boys High school, we are dedicated to Nurturing the next generation of 
                 leaders. Our commitment to academic excellence and character development sets 
                 the foundation for lifelong success.
@@ -49,30 +49,30 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 {/* School Logo Display */}
-                <div className="bg-white rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                  <div className="w-64 h-80 bg-gradient-to-b from-blue-100 to-cyan-50 rounded-2xl flex flex-col items-center justify-center p-6 border-4 border-blue-200">
+                <div className="bg-white rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="w-48 h-60 bg-gradient-to-b from-blue-100 to-cyan-50 rounded-xl flex flex-col items-center justify-center p-4 border-4 border-blue-200">
                     {/* School Header */}
-                    <div className="bg-blue-800 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 text-center">
+                    <div className="bg-blue-800 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 text-center">
                       CHINGA BOYS HIGH SCHOOL
                     </div>
                     
                     {/* School Logo */}
-                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg border-4 border-blue-800">
+                    <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-lg border-4 border-blue-800">
                       <img 
                         src="src/assets/images/logo.jpeg" 
                         alt="Chinga Boys High School Logo" 
-                        className="w-28 h-28 object-contain rounded-full"
+                        className="w-20 h-20 object-contain rounded-full"
                       />
                     </div>
 
                     {/* Crossed Items (representing academic tools) */}
-                    <div className="relative mb-6">
-                      <div className="w-16 h-1 bg-blue-800 transform rotate-45"></div>
-                      <div className="w-16 h-1 bg-blue-800 transform -rotate-45 absolute top-0"></div>
+                    <div className="relative mb-4">
+                      <div className="w-12 h-1 bg-blue-800 transform rotate-45"></div>
+                      <div className="w-12 h-1 bg-blue-800 transform -rotate-45 absolute top-0"></div>
                     </div>
 
                     {/* Bottom Banner */}
-                    <div className="bg-blue-800 text-white px-3 py-1 rounded text-xs font-bold text-center">
+                    <div className="bg-blue-800 text-white px-2 py-1 rounded text-xs font-bold text-center">
                       LEARNING • DISCIPLINE • DESTINY
                     </div>
                   </div>
@@ -84,10 +84,10 @@ const Hero = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="bg-gradient-to-b from-cyan-200 to-blue-200 py-16">
+      <section className="bg-gradient-to-b from-cyan-200 to-blue-200 py-12">
         <div className="container mx-auto px-4">
           {/* Navigation Arrows */}
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex justify-between items-center mb-6">
             <button className="text-gray-600 hover:text-gray-800 transition-colors">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
@@ -101,17 +101,17 @@ const Hero = () => {
           </div>
 
           {/* Star Rating */}
-          <div className="flex justify-center space-x-1 mb-8">
+          <div className="flex justify-center space-x-1 mb-6">
             {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-8 h-8 text-yellow-400 fill-current" viewBox="0 0 20 20">
+              <svg key={i} className="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
               </svg>
             ))}
           </div>
 
           {/* Testimonial Quote */}
-          <blockquote className="text-center max-w-4xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed mb-8">
+          <blockquote className="text-center max-w-4xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed mb-6">
               "Chinga Boys High School has transformed my son's life. The supportive environment and dedicated teachers have made all the difference in his education journey."
             </p>
           </blockquote>

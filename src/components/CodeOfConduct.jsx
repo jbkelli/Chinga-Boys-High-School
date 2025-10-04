@@ -1,10 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CodeOfConduct = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
+      <div className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20 relative">
+        {/* Go Back Button */}
+        <div className="absolute top-6 left-6">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 group"
+          >
+            <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span className="font-medium">Go back to home</span>
+          </Link>
+        </div>
+        
         <div className="container mx-auto px-4 text-center">
           <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
