@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex-shrink-0">
               <div className="w-20 h-24 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                 <img 
-                  src="src/assets/images/public_seal.jpeg" 
+                  src="/images/public_seal.jpeg" 
                   alt="Public Seal of Kenya" 
                   className="w-full h-full object-contain rounded"
                 />
@@ -85,7 +85,7 @@ const Footer = () => {
           <div className="flex justify-start mb-12">
             <div className="w-20 h-24 bg-white rounded-2xl flex items-center justify-center p-2 border-2 border-gray-200 shadow-lg">
               <img 
-                src="src/assets/images/logo.jpeg" 
+                src="/images/logo.jpeg" 
                 alt="Chinga Boys High School Logo" 
                 className="w-full h-full object-contain rounded"
               />

@@ -33,7 +33,7 @@ const Student = () => {
         {/* Logo placeholder */}
         <div className="flex justify-center mb-8">
           <div className="w-15 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center">
-            <div className="text-gray-600 text-sm font-medium"><img src="src/assets/images/education.jpg" alt="" /></div>
+            <div className="text-gray-600 text-sm font-medium"><img src="/images/education.jpg" alt="" /></div>
           </div>
         </div>
 

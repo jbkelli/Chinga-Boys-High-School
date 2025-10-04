@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
 
-// Import images
-import schoolEntrance from '../assets/images/school_entrance.jpg';
-import scienceLaboratory from '../assets/images/science_laboratory.jpg';
-import library from '../assets/images/library.jpg';
-import schoolField from '../assets/images/school_field.jpg';
-import computerLaboratory from '../assets/images/computer_laboratory.jpg';
-import graduation from '../assets/images/graduation.jpg';
-import domitories from '../assets/images/domitories.jpg';
-import basketballCourt from '../assets/images/basketball_court.jpg';
-import scienceFair from '../assets/images/science_fair.jpg';
-
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -28,63 +17,63 @@ const Gallery = () => {
       category: 'campus',
       title: 'School Entrance',
       description: 'Main entrance to Chinga Boys High School',
-      imageUrl: schoolEntrance
+      imageUrl: '/images/school_entrance.jpg'
     },
     {
       id: 2,
       category: 'academics',
       title: 'Science Laboratory',
       description: 'Modern chemistry and physics laboratory',
-      imageUrl: scienceLaboratory
+      imageUrl: '/images/science_laboratory.jpg'
     },
     {
       id: 3,
       category: 'campus',
       title: 'Library',
       description: 'Well-stocked library facility for research and study',
-      imageUrl: library
+      imageUrl: '/images/library.jpg'
     },
     {
       id: 4,
       category: 'sports',
       title: 'Sports Field',
       description: 'Football and athletics field for outdoor activities',
-      imageUrl: schoolField
+      imageUrl: '/images/school_field.jpg'
     },
     {
       id: 5,
       category: 'academics',
       title: 'Computer Laboratory',
       description: 'Modern computer laboratory with latest technology',
-      imageUrl: computerLaboratory
+      imageUrl: '/images/computer_laboratory.jpg'
     },
     {
       id: 6,
       category: 'events',
       title: 'Graduation Ceremony',
       description: 'Annual graduation ceremony celebrating student achievements',
-      imageUrl: graduation
+      imageUrl: '/images/graduation.jpg'
     },
     {
       id: 7,
       category: 'campus',
       title: 'Student Dormitories',
       description: 'Comfortable student accommodation facilities',
-      imageUrl: domitories
+      imageUrl: '/images/domitories.jpg'
     },
     {
       id: 8,
       category: 'sports',
       title: 'Basketball Court',
       description: 'Indoor basketball facility for sports activities',
-      imageUrl: basketballCourt
+      imageUrl: '/images/basketball_court.jpg'
     },
     {
       id: 9,
       category: 'events',
       title: 'Science Fair',
       description: 'Annual science exhibition showcasing student innovations',
-      imageUrl: scienceFair
+      imageUrl: '/images/science_fair.jpg'
     }
   ];
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/images/logo.jpeg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +24,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3 border-2 border-gray-200 shadow-sm">
               <img 
-                src={logo} 
+                src="/images/logo.jpeg" 
                 alt="Chinga Boys High School Logo" 
                 className="w-10 h-10 object-contain rounded-full"
               />

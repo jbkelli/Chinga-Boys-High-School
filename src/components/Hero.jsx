@@ -59,7 +59,7 @@ const Hero = () => {
                     {/* School Logo */}
                     <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-lg border-4 border-blue-800">
                       <img 
-                        src="src/assets/images/logo.jpeg" 
+                        src="/images/logo.jpeg" 
                         alt="Chinga Boys High School Logo" 
                         className="w-20 h-20 object-contain rounded-full"
                       />
@@ -136,7 +136,7 @@ const Hero = () => {
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-white rounded flex items-center justify-center shadow-md">
                 <img 
-                  src="src/assets/images/logo.jpeg" 
+                  src="/images/logo.jpeg" 
                   alt="Chinga Boys High School Logo" 
                   className="w-10 h-10 object-contain rounded"
                 />
