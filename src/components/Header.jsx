@@ -22,55 +22,55 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3 border-2 border-gray-200 shadow-sm">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center mr-2 sm:mr-3 border-2 border-gray-200 shadow-sm flex-shrink-0">
               <img 
                 src="/images/logo.jpeg" 
                 alt="Chinga Boys High School Logo" 
-                className="w-10 h-10 object-contain rounded-full"
+                className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-full"
               />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-800">CHINGA BOYS</h1>
-              <p className="text-sm text-gray-600">HIGH SCHOOL</p>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 leading-none mb-0.5">CHINGA BOYS</h1>
+              <p className="text-xs sm:text-sm text-gray-600 leading-none">HIGH SCHOOL</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/#home" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-8">
+            <Link to="/#home" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Home Page
             </Link>
-            <Link to="/#about" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/#about" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               About Us
             </Link>
-            <Link to="/#academics" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/#academics" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Academics
             </Link>
-            <Link to="/#gallery" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/#gallery" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Gallery
             </Link>
-            <Link to="/#blog" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/#blog" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Blog
             </Link>
-            <Link to="/#contact" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/#contact" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Contact
             </Link>
-            <Link to="/students" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/students" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Students
             </Link>
-            <Link to="/parents" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/parents" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Parents
             </Link>
-            <Link to="/events" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
+            <Link to="/events" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors text-sm xl:text-base leading-none">
               Events
             </Link>
           </nav>
 
           {/* Join Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:flex items-center">
             <a 
               href="#newsletter" 
-              className="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition-colors font-medium inline-block"
+              className="bg-cyan-500 text-white px-4 xl:px-6 py-2 rounded-full hover:bg-cyan-600 transition-colors font-medium inline-flex items-center text-sm xl:text-base whitespace-nowrap leading-none"
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.querySelector('#newsletter');
@@ -85,44 +85,109 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-700 hover:border-gray-700"
+            className="lg:hidden flex items-center p-2 rounded-md text-gray-700 hover:text-cyan-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
-            <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-            </svg>
+            {isMenuOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link to="/#home" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Home Page</Link>
-              <Link to="/#about" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">About Us</Link>
-              <Link to="/#academics" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Academics</Link>
-              <Link to="/#gallery" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Gallery</Link>
-              <Link to="/#blog" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Blog</Link>
-              <Link to="/#contact" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Contact</Link>
-              <Link to="/students" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Students</Link>
-              <Link to="/parents" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Parents</Link>
-              <Link to="/events" className="block px-3 py-2 text-gray-700 hover:text-cyan-600">Events</Link>
+        <div 
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-2 pt-2 pb-4 space-y-1 bg-white border-t">
+            <Link 
+              to="/#home" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home Page
+            </Link>
+            <Link 
+              to="/#about" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/#academics" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Academics
+            </Link>
+            <Link 
+              to="/#gallery" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+            <Link 
+              to="/#blog" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/#contact" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <Link 
+              to="/students" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Students
+            </Link>
+            <Link 
+              to="/parents" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Parents
+            </Link>
+            <Link 
+              to="/events" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-600 hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Events
+            </Link>
+            <div className="px-3 pt-2">
               <button 
-                className="w-full mt-4 bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition-colors"
+                className="w-full bg-cyan-500 text-white px-6 py-2.5 rounded-full hover:bg-cyan-600 transition-colors font-medium"
                 onClick={(e) => {
                   const element = document.querySelector('#newsletter');
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
-                  setIsMenuOpen(false); // Close mobile menu
+                  setIsMenuOpen(false);
                 }}
               >
                 Join
               </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

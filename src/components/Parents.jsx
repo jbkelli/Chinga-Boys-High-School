@@ -73,30 +73,185 @@ const Parents = () => {
                 </div>
               </div>
 
-              {/* Development Message */}
-              <div className="text-center py-16">
-                <div className="w-24 h-24 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">This Site is Under Development</h2>
-                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                  We're working hard to bring you a comprehensive parents information board. 
-                  This section will include important school announcements, student updates, 
-                  and event notifications.
-                </p>
-                
-                <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-8 border border-cyan-200 max-w-2xl mx-auto">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🚧 Development In Progress</h3>
-                  <p className="text-gray-700 mb-4">
-                    Our development team is currently building this feature. Please check back soon!
-                  </p>
-                  <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
-                    <div className="bg-cyan-600 h-4 rounded-full transition-all duration-500" style={{width: '40%'}}></div>
+              {/* TODO: Backend - Fetch events from API */}
+              {/* Important Events Timeline */}
+              <div className="space-y-6">
+                {/* Visiting Days Event */}
+                <div className="border-l-4 border-blue-500 pl-6 py-4 hover:bg-blue-50 transition-colors rounded-r-lg">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-800">Visiting Day</h3>
+                          <p className="text-sm text-gray-600">November 15, 2025 • 9:00 AM - 4:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-3">
+                        Parents and guardians are invited to visit their children on campus. Meet with teachers and tour school facilities.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                          Upcoming
+                        </span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          📍 School Campus
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-600">Estimated completion: 40%</p>
                 </div>
+
+                {/* Clinic/Medical Checkup Event */}
+                <div className="border-l-4 border-green-500 pl-6 py-4 hover:bg-green-50 transition-colors rounded-r-lg">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-800">Medical Clinic & Health Checkup</h3>
+                          <p className="text-sm text-gray-600">November 8, 2025 • 8:00 AM - 2:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-3">
+                        Comprehensive health checkup for all students. Annual medical screening, vaccinations, and dental checkup. Parental consent forms required.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                          Upcoming
+                        </span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          📍 School Clinic
+                        </span>
+                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">
+                          ⚠️ Consent Required
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Fundraising Event */}
+                <div className="border-l-4 border-purple-500 pl-6 py-4 hover:bg-purple-50 transition-colors rounded-r-lg">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-800">School Development Fundraising</h3>
+                          <p className="text-sm text-gray-600">December 1, 2025 • 10:00 AM - 3:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-3">
+                        Annual fundraising event for new computer lab and library expansion. Join us for lunch, entertainment, and raffles. All parents welcome!
+                      </p>
+                      <div className="bg-purple-50 p-3 rounded-lg mb-3 border border-purple-200">
+                        <p className="text-sm text-purple-900 font-semibold mb-1">Fundraising Goal: KSh 2,500,000</p>
+                        <div className="w-full bg-purple-200 rounded-full h-2">
+                          <div className="bg-purple-600 h-2 rounded-full" style={{width: '65%'}}></div>
+                        </div>
+                        <p className="text-xs text-purple-700 mt-1">KSh 1,625,000 raised (65%)</p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">
+                          Upcoming
+                        </span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          📍 School Hall
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Parent-Teacher Meeting */}
+                <div className="border-l-4 border-orange-500 pl-6 py-4 hover:bg-orange-50 transition-colors rounded-r-lg">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-800">Parent-Teacher Meetings</h3>
+                          <p className="text-sm text-gray-600">November 22, 2025 • 2:00 PM - 6:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-3">
+                        Term 3 progress reports and academic discussion. Schedule individual meetings with your child's teachers to discuss academic performance and behavior.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-medium">
+                          Upcoming
+                        </span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          📍 Classrooms
+                        </span>
+                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">
+                          📅 Booking Required
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sports Day */}
+                <div className="border-l-4 border-red-500 pl-6 py-4 hover:bg-red-50 transition-colors rounded-r-lg">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-800">Annual Sports Day</h3>
+                          <p className="text-sm text-gray-600">December 10, 2025 • 8:00 AM - 5:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-3">
+                        Inter-house athletics competition featuring track and field events. Parents invited to cheer for their children. Refreshments and awards ceremony included.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-medium">
+                          Upcoming
+                        </span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+                          📍 School Field
+                        </span>
+                        <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs">
+                          🎟️ Free Entry
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* No Events Placeholder (Backend will toggle this) */}
+                {/* TODO: Backend - Show this when no events are available
+                <div className="text-center py-12">
+                  <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p className="text-gray-600">No upcoming events at this time</p>
+                  <p className="text-sm text-gray-500 mt-2">Check back later for updates</p>
+                </div>
+                */}
               </div>
             </div>
           </div>
